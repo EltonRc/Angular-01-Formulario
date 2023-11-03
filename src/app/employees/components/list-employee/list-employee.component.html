@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="text-center fw-bold">Listado</h4>
+        <hr class="text-secondary">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Edad</th>
+                      <th scope="col">Elim</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let employ of employ; let i=index">
+                      <td class="align-middle">{{i+1}}</td>
+                      <td class="align-middle">{{employ.name}}</td>
+                      <td class="align-middle">{{employ.lastName}}</td>
+                      <td class="align-middle">{{employ.age}}</td>
+                      <td><button class="btn btn-danger btn-sm fw-bold" (click)="emitId(employ.uuid)" >X</button></td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
